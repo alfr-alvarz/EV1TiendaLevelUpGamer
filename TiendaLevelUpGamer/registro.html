@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+    <nav class="navbar-header">
+        <div class="navbar-izq">
+            <h2>LevelUpGamer</h2>
+        </div>
+
+        <div class="navbar-centro">
+            <ul>
+                <li class="link-centro"><a href="#">Productos</a></li>
+                <span>|</span>
+                <li class="link-centro"><a href="#">Nosotros</a></li>
+                <span>|</span>
+                <li class="link-centro"><a href="#">Blogs</a></li>
+                <span>|</span>
+                <li class="link-centro"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-derecha">
+            <span class="icono-carrito">🛒</span><a href="#">Carrito</a>
+        </div>
+    </nav>
+
+
+<div class = "container">
+    <form class = "form-registro">
+        <h1>Registro de usuario</h1>
+        <div class=" form-row">
+            <div class="mb-3">
+                <label for = "nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email", placeholder="Ej: juan@gmail.com" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword4", placeholder="********">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="inputAddress">Dirección </label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Santiago centro, 3223">
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="+56 9 1234 5678" required>
+        </div>
+
+
+        <select class="form-select form-select-region" aria-label=".form-select-sm region">
+            <option selected>--Selecione su región--</option>
+            <option value="1">Región Metropolitana de Santiago</option>
+            <option value="2">Región de la Araucania</option>
+            <option value="3">Región de Ñuble</option>
+            <option value="4">Región de Valparaíso.</option>
+        </select>
+
+        <select class="form-select form-select-sm-comuna" aria-label=".form-select-sm comuna">
+            <option selected>--Selecione su Comuna--</option>
+            <option value="1">Santiago</option>
+            <option value="2">Puerto Montt</option>
+            <option value="3">Antofagasta</option>
+            <option value="4">Ancud</option>
+        </select>
+
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="boton-registrar">Registrarse</button>
+        <h3 id="result1"></h3>
+        <h3 id="result2"></h3>
+
+    </form>
+
+
+    <!-- Se debe asignar un tamaño adecuado -->
+    <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/whatsapp_icon.png" alt="Contactar por WhatsApp">
+    </a>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="./js/registro.js"></script>
+
+</body>
+</html>
