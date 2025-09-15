@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <title>Catálogo de Productos</title>
     <link rel="stylesheet" href="css/general.css">
+
 </head>
 <body>
+    <div class="navbar-derecha">
+        <a href="carrito.html" class="icono-carrito">🛒 Carrito</a>
+        <a href="home.html" class="btn-volver">← Ir al Inicio</a>
+    </div>
 
     <h1>Productos Disponibles</h1>
     <div id="productoscontainer">
         <!-- Aquí se insertarán los productos desde JS -->
     </div>
+    
+    <section class="reseñas" id="reseñas">
+        <h2>Reseñas de clientes</h2>
+    
+        <!-- Formulario para agregar reseña -->
+        <form id="formReseña">
+            <label for="usuario">Nombre:</label>
+            <input type="text" id="usuario" placeholder="Tu nombre" required>
+    
+            <label for="calificacion">Calificación:</label>
+            <select id="calificacion" required>
+                <option value="">Selecciona</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★</option>
+                <option value="3">★★★</option>
+                <option value="2">★★</option>
+                <option value="1">★</option>
+            </select>
+    
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="3" placeholder="Cuntanos que productos compraste y deja tu opinion" required></textarea>
+    
+            <button type="submit">Enviar reseña</button>
+        </form>
+    
+        <!-- Contenedor donde se mostrarán las reseñas -->
+        <div id="listaReseñas"></div>
+    </section>
+    
 
     <script src="js/productos.js"></script>
-    <a href="home.html">Volver al Inicio</a>
+
 </body>
 </html>

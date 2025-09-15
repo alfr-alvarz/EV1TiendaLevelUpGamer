@@ -82,6 +82,10 @@ form.addEventListener("submit", function(e) {
     result1.textContent = `¡Registro exitoso, ${nombre}!`;
     result2.textContent = descuento > 0 ? "¡Tienes un 20% de descuento por ser de Duoc UC!" : "";
 
+    // Después de validar email y password:
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuarioEncontrado));
+
+
     // Limpiar formulario
     form.reset();
 });

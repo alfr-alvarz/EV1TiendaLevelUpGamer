@@ -32,6 +32,7 @@
     </nav>
 
     <div class="menu-sesion">
+        <a href="admin/editar_usuario.html">Editar datos personales</a>
         <a href="login.html">Iniciar sesión</a> | 
         <a href="registro.html">Registrar usuario</a>
     </div>
@@ -47,32 +48,50 @@
             </p>
             <button><a href="productos.html">Ver productos</a></button>
         </div>
+            
+        
         <div class="banner-imagen">
             <img src="assets/img/tienda-destacado.jpg" alt = "Imagen de un joystick con azul neón">
         </div>
-    </section>
-
-    <section class="box-productos">
-
-        
-
         
     </section>
+    <section class="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div id="productosDestacados"></div>
+
+        <div id="productoscontainer"></div>
+        
+
+    </section>
+
+    
+    
 
     <footer>
         <div class="footer-izq">
-            <p>LevelUpGamer.com</p>
-            <nav>
-                <a href="#">Categoria-producto1</a>
-                <a href="#">Categoria-producto2</a>
-                <a href="#">Categoria-producto3</a>
-            </nav>
+            <p>LevelUpGamer.com</p> 
+            
             <div class="iconos-payment">
                 <img src="assets/img/visa.png" alt="Visa">
                 <img src="assets/img/mastercard.png" alt="MasterCard">
                 <img src="assets/img/paypal.png" alt="PayPal">
-            </div>
+            </div>     
         </div>
+
+        <section class="catalogo-categorias">
+            <h2>Categorías</h2>
+            <div class="categorias-container">
+                <a href="productos.html?categoria=sillas">Sillas Gamer</a>
+                <span>|</span>
+                <a href="productos.html?categoria=pc">PCs Gamer</a>
+                <span>|</span>
+                <a href="productos.html?categoria=accesorios">Accesorios</a>
+                <span>|</span>
+                <a href="productos.html?categoria=consolas">Consolas</a>
+                <span>|</span>
+                <a href="productos.html">Todos</a>
+            </div>
+        </section>
 
         <div class="footer-derecha">
             <p>Mantente al tanto. Únete a nuestro Newsletter:</p>
@@ -84,4 +103,6 @@
     </footer>
 
 </body>
+<script src="js/productos.js"></script>
+<script src="js/home.js"></script>
 </html>
