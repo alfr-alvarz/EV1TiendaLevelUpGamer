@@ -14,7 +14,7 @@ form.addEventListener("submit", function(e) {
     const region = document.querySelector(".form-select-region").value;
     const comuna = document.querySelector(".form-select-sm-comuna").value;
 
-    // Validar edad
+    // 1️⃣ Validar edad
     const hoy = new Date();
     let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
     if (hoy.getMonth() < fechaNacimiento.getMonth() || 
@@ -27,7 +27,7 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    // Validar correo
+    // 2️⃣ Validar correo
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         result1.textContent = "Correo no válido.";
@@ -35,7 +35,7 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    //  Validar contraseña
+    // 3️⃣ Validar contraseña
     const passRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
     if (!passRegex.test(password)) {
         result1.textContent = "Contraseña debe tener mínimo 8 caracteres, al menos una letra y un número.";
@@ -43,25 +43,25 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    // Validar teléfono 
+    // 4️⃣ Validar teléfono chileno
     const telRegex = /^(\+?56)?\s?(9)?\s?\d{4}\s?\d{4}$/;
     if (!telRegex.test(telefono)) {
-        result1.textContent = "Teléfono inválido. Debe ser de este formato : +56912345678 o 912345678";
+        result1.textContent = "Teléfono inválido. Debe ser formato chileno: +56912345678 o 912345678";
         result2.textContent = "";
         return;
     }
 
-    // región y comuna
+    // 5️⃣ Validar región y comuna
     if (region === "--Selecione su región--" || comuna === "--Selecione su Comuna--") {
         result1.textContent = "Debes seleccionar tu región y comuna.";
         result2.textContent = "";
         return;
     }
 
-    //  Aplicar descuento si correo duocuc
+    // 6️⃣ Aplicar descuento si correo duocuc
     const descuento = email.endsWith("@duocuc.cl") ? 20 : 0;
 
-    // Guardar usuario
+    // 7️⃣ Guardar usuario
     const usuario = {
         nombre,
         email,
@@ -78,7 +78,7 @@ form.addEventListener("submit", function(e) {
     usuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Mostrar mensajes
+    // 8️⃣ Mostrar mensajes
     result1.textContent = `¡Registro exitoso, ${nombre}!`;
     result2.textContent = descuento > 0 ? "¡Tienes un 20% de descuento por ser de Duoc UC!" : "";
 
